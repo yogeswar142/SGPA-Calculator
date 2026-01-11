@@ -1,4 +1,8 @@
 import "./style.css";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+
+// Initialize Vercel Speed Insights
+injectSpeedInsights();
 
 /* ---------- GRADE MAP ---------- */
 const gradePoints = { "O":10,"A+":9,"A":8,"B+":7,"B":6,"C":5,"P":4,"I":4 };
