@@ -1,0 +1,18 @@
+{
+  "name": "gitam-sgpa",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node obfuscate.js"
+  },
+  "dependencies": {
+    "javascript-obfuscator": "^4.0.2"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17"
+  }
+}
