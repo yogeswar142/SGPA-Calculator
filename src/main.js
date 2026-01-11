@@ -30,9 +30,12 @@ const grades = ["O","A+","A","B+","B","C","P","I"];
 document.getElementById("app").innerHTML = `
 <div class="max-w-6xl mx-auto p-6">
   <div class="bg-white p-6 rounded-xl shadow-xl">
-    <h1 class="text-3xl font-bold text-center text-indigo-700 mb-4">GITAM SGPA Calculator</h1>
+    <h1 class="text-3xl font-bold text-center text-indigo-700 mb-4">
+      GITAM SGPA Calculator
+    </h1>
 
-    <table class="w-full border mb-4" id="table">
+    <div class="overflow-x-auto">
+    <table class="min-w-[900px] w-full border mb-4" id="table">
       <tr class="bg-indigo-100">
         <th>Subject</th>
         <th>Credits</th>
@@ -44,15 +47,30 @@ document.getElementById("app").innerHTML = `
         <th></th>
       </tr>
     </table>
+    </div>
 
     <div class="flex gap-3">
-      <button id="add" class="bg-indigo-600 text-white px-4 py-2 rounded">➕ Add Subject</button>
-      <button id="calc" class="bg-green-600 text-white px-4 py-2 rounded">📊 Calculate SGPA</button>
+      <button id="add" class="bg-indigo-600 text-white px-4 py-2 rounded">
+        ➕ Add Subject
+      </button>
+      <button id="calc" class="bg-green-600 text-white px-4 py-2 rounded">
+        📊 Calculate SGPA
+      </button>
     </div>
 
     <div id="error" class="mt-4 text-red-600 font-semibold"></div>
     <div id="result" class="mt-6 text-3xl font-bold text-center text-indigo-700"></div>
   </div>
+
+  <!-- Footer credit -->
+  <footer class="mt-8 text-center text-white opacity-90">
+    <a href="https://instagram.com/yogeswar265" target="_blank"
+       class="inline-flex items-center gap-2 hover:opacity-100">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+           class="w-5 h-5" />
+      <span>Made by @yogeswar265</span>
+    </a>
+  </footer>
 </div>
 `;
 
@@ -137,5 +155,3 @@ document.getElementById("calc").onclick = () => {
   document.getElementById("error").innerText = "";
   document.getElementById("result").innerText = `🎯 SGPA = ${(total/totalCredits).toFixed(2)}`;
 };
-
-
